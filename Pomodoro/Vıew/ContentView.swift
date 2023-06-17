@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject private var vm = CounterDownViewModel()
     private let width = 300.0
     private let time = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var isShow = true
     
     var body: some View {
         NavigationStack {
@@ -58,18 +59,21 @@ struct ContentView: View {
             }
             .navigationTitle("Pomodoro")
             .toolbar {
-                Button {
-                    // Action
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                        .tint(.white)
-                }
+                ShareLink(item: "Congratulation you complete a pomodoro")
+                    .disabled(!vm.isShare)
             }
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(Color.red, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .onReceive(time) { _ in
                 vm.updateCountDown()
+            }
+            .alert(isPresented: $vm.isCompleted) {
+                // action
+//                Alert(title: Text("Deneme"), message: Text("This is the message"), dismissButton: .cancel())
+                Alert(title: Text("Deneme 2"), primaryButton: .default(Text("OK")) {
+                    vm.isShare.toggle()
+                }, secondaryButton: .cancel())
             }
         }
     }

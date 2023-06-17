@@ -6,17 +6,20 @@
 //
 
 import Foundation
+import SwiftUI
 
 class CounterDownViewModel: ObservableObject {
     @Published var isActive: Bool = false
     @Published var time: String = "0:00"
     @Published var breakName: String = ""
     @Published var countSet: Int = 0
+    @Published var isCompleted: Bool = false
     @Published var minutes: Double = 25.0 {
         didSet{
             time = "\(Int(minutes)):00"
         }
     }
+    @Published var isShare = false
     
     private var initialTime = 0
     private var endDate = Date()
@@ -59,6 +62,7 @@ class CounterDownViewModel: ObservableObject {
         
         if self.countSet > 4 {
             self.countSet = 0
+            self.isCompleted = true
         }
     }
     
@@ -67,6 +71,7 @@ class CounterDownViewModel: ObservableObject {
         self.countSet = 0
         self.breakName = ""
         self.isActive = false
+        self.isCompleted = false
     }
     
     func updateCountDown() {
@@ -75,9 +80,9 @@ class CounterDownViewModel: ObservableObject {
         let now = Date()
         let diff = endDate.timeIntervalSince1970 - now.timeIntervalSince1970
         
-//        if diff <= 0 {
-//            self.isActive = false
-//        }
+        if diff <= 0 {
+            self.skip()
+        }
         let date = Date(timeIntervalSince1970: diff)
         let calendar = Calendar.current
         let minutes = calendar.component(.minute, from: date)
