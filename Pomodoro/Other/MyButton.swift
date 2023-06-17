@@ -29,7 +29,7 @@ struct MyButton: View {
 
 struct MyButton_Previews: PreviewProvider {
     static var previews: some View {
-        MyButton(title: "Start") {
+        MyButton(title: String(localized: "start-string")) {
             // action
         }
     }

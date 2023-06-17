@@ -29,7 +29,7 @@ class CounterDownViewModel: ObservableObject {
     func start(minutes: Double) {
         self.initialTime = Int(minutes)
         self.minutes = minutes
-        self.breakName = "Work"
+        self.breakName = String(localized: "work")
         self.isActive = true
         self.endDate = Date()
         self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
@@ -43,17 +43,17 @@ class CounterDownViewModel: ObservableObject {
             if self.countSet < 4 {
 //                self.minutes = pomodoro[1]
                 self.start(minutes: pomodoro[1])
-                self.breakName = "Short Break"
+                self.breakName = String(localized: "short-break")
             } else {
 //                self.minutes = pomodoro[2]
                 self.start(minutes: pomodoro[2])
-                self.breakName = "Long Break"
+                self.breakName = String(localized: "long-break")
             }
             
         } else {
 //            self.minutes = pomodoro[0]
             self.start(minutes: pomodoro[0])
-            self.breakName = "Work"
+            self.breakName = String(localized: "work")
         }
         
         if !self.isBreak {

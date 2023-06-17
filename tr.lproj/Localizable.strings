@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Pomodoro
+
+  Created by Kagan Kuscu on 17.06.23.
+  
+*/
+
+"app-name" = "Pomodoro";
+
+"hello-string" = "Merhaba, Dünya!";
+"start-string" = "Başla";
+"skip-string" = "Geç";
+"reset-string" = "Sıfırla";
+
+"welcome %@" = "Hoşgeldiniz %@";
+
+"congratulation-string" = "Tebrikler bir Pomodoro tamamladınız.";
+
+"short-break" = "Kısa Mola";
+"long-break" = "Uzun Mola";
+"work" = "Çalışma zamanı";
