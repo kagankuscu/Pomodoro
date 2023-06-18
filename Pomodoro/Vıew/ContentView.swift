@@ -21,15 +21,19 @@ struct ContentView: View {
                     Image(systemName: vm.countSet >= 1 ? "circle.fill" : "circle")
                         .resizable()
                         .frame(width: 30, height: 30)
+                        .scaleEffect(vm.countSet >= 1 ? 1.25 : 1)
                     Image(systemName: vm.countSet >= 2 ? "circle.fill" : "circle")
                         .resizable()
                         .frame(width: 30, height: 30)
+                        .scaleEffect(vm.countSet >= 2 ? 1.25 : 1)
                     Image(systemName: vm.countSet >= 3 ? "circle.fill" : "circle")
                         .resizable()
                         .frame(width: 30, height: 30)
+                        .scaleEffect(vm.countSet >= 3 ? 1.25 : 1)
                     Image(systemName: vm.countSet >= 4 ? "circle.fill" : "circle")
                         .resizable()
                         .frame(width: 30, height: 30)
+                        .scaleEffect(vm.countSet >= 4 ? 1.25 : 1)
                 }
                 .foregroundColor(.red)
                 .frame(width: width)
@@ -65,7 +69,9 @@ struct ContentView: View {
             .toolbarBackground(Color.red, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .onReceive(time) { _ in
-                vm.updateCountDown()
+                if !vm.isPaused {
+                    vm.updateCountDown()
+                }
             }
             .alert(String(localized: "congratulation-string") ,isPresented: $vm.isCompleted) {
                 // action
@@ -75,21 +81,18 @@ struct ContentView: View {
     @ViewBuilder
     func ButtonContainer() -> some View {
         HStack {
-            MyButton(title: String(localized: "start-string")) {
-                // action
-                print("Start")
-                print("\(vm.minutes)")
-                vm.start(minutes: 25.0)
+            MyButton(title: vm.isActive && !vm.isPaused ? String(localized: "pause-string") : String(localized: "start-string")) {
+                if !vm.isActive {
+                    vm.start(minutes: 25.0)
+                } else {
+                    vm.isPaused.toggle()
+                }
             }
-            .disabled(vm.isActive)
             MyButton(title: String(localized: "skip-string")) {
-                // action
-                print("Skip")
                 vm.skip()
             }
             .opacity(vm.isActive ? 1 : 0)
             MyButton(title: String(localized: "reset-string")) {
-                // action
                 print("Reset")
                 vm.reset()
             }

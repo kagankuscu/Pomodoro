@@ -11,7 +11,7 @@ import SwiftUI
 class CounterDownViewModel: ObservableObject {
     @Published var isActive: Bool = false
     @Published var time: String = "0:00"
-    @Published var breakName: String = ""
+    @Published var breakName: String = String(localized: "start-string")
     @Published var countSet: Int = 0
     @Published var isCompleted: Bool = false
     @Published var minutes: Double = 25.0 {
@@ -20,6 +20,7 @@ class CounterDownViewModel: ObservableObject {
         }
     }
     @Published var isShare = false
+    @Published var isPaused = false
     
     private var initialTime = 0
     private var endDate = Date()
@@ -27,13 +28,14 @@ class CounterDownViewModel: ObservableObject {
     private var pomodoro = [25.0, 5.0, 15.0]
     
     func start(minutes: Double) {
-        self.initialTime = Int(minutes)
-        self.minutes = minutes
-        self.breakName = String(localized: "work")
-        self.isActive = true
-        self.endDate = Date()
-        self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
-        
+        withAnimation(.easeInOut) {
+            self.initialTime = Int(minutes)
+            self.minutes = minutes
+            self.breakName = String(localized: "work")
+            self.isActive = true
+            self.endDate = Date()
+            self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
+        }
     }
     
     func skip() {
@@ -41,37 +43,47 @@ class CounterDownViewModel: ObservableObject {
         
         if isBreak {
             if self.countSet < 4 {
-//                self.minutes = pomodoro[1]
                 self.start(minutes: pomodoro[1])
-                self.breakName = String(localized: "short-break")
+                withAnimation(.easeInOut) {
+                    self.breakName = String(localized: "short-break")
+                }
             } else {
-//                self.minutes = pomodoro[2]
-                self.start(minutes: pomodoro[2])
-                self.breakName = String(localized: "long-break")
+                withAnimation(.easeInOut) {
+                    self.start(minutes: pomodoro[2])
+                    self.breakName = String(localized: "long-break")
+                }
             }
             
         } else {
-//            self.minutes = pomodoro[0]
-            self.start(minutes: pomodoro[0])
-            self.breakName = String(localized: "work")
+            withAnimation(.easeInOut) {
+                self.start(minutes: pomodoro[0])
+                self.breakName = String(localized: "work")
+            }
         }
         
         if !self.isBreak {
-            self.countSet += 1
+            withAnimation(.easeInOut) {
+                self.countSet += 1
+            }
         }
         
         if self.countSet > 4 {
-            self.countSet = 0
-            self.isCompleted = true
+            withAnimation(.easeInOut) {
+                self.countSet = 0
+                self.isCompleted = true
+            }
         }
     }
     
     func reset() {
-        self.minutes = 0.0
-        self.countSet = 0
-        self.breakName = ""
-        self.isActive = false
-        self.isCompleted = false
+        withAnimation(.easeInOut) {
+            self.minutes = 0.0
+            self.countSet = 0
+            self.breakName = String(localized: "start-string")
+            self.isActive = false
+            self.isCompleted = false
+            self.isPaused = false
+        }
     }
     
     func updateCountDown() {

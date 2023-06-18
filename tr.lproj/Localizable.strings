@@ -12,6 +12,7 @@
 "start-string" = "Başla";
 "skip-string" = "Geç";
 "reset-string" = "Sıfırla";
+"pause-string" = "Beklet";
 
 "welcome %@" = "Hoşgeldiniz %@";
 

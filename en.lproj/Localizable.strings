@@ -12,6 +12,7 @@
 "start-string" = "Start";
 "skip-string" = "Skip";
 "reset-string" = "Reset";
+"pause-string" = "Pause";
 
 "welcome %@" = "Welcome %@";
 
