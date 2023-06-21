@@ -21,3 +21,6 @@
 "short-break" = "Short Break";
 "long-break" = "Long Break";
 "work" = "Work";
+
+"worktime-string" = "Work Time";
+"setting-string" = "Settings";

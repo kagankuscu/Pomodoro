@@ -47,7 +47,7 @@ struct ContentView: View {
                     .background(.thinMaterial)
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20).stroke(.gray, lineWidth: 2.0))
-                    
+                
                 Text(vm.breakName)
                     .font(.title)
                     .fontDesign(.rounded)
@@ -62,8 +62,15 @@ struct ContentView: View {
             }
             .navigationTitle(String(localized: "app-name", comment: "App name"))
             .toolbar {
-                ShareLink(item: String(localized: "congratulation-string"))
-                    .disabled(!vm.isShare)
+                ToolbarItemGroup {
+                    ShareLink(item: String(localized: "congratulation-string"))
+                        .disabled(!vm.isShare)
+                    NavigationLink {
+                        SettingView()
+                    } label: {
+                        Image(systemName: "gear")
+                    }
+                }
             }
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(Color.red, for: .navigationBar)

@@ -21,3 +21,6 @@
 "short-break" = "Kısa Mola";
 "long-break" = "Uzun Mola";
 "work" = "Çalışma zamanı";
+
+"worktime-string" = "Çalışma Süresi";
+"setting-string" = "Ayarlar";

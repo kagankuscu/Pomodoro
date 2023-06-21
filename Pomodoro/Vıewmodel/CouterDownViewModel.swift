@@ -22,10 +22,14 @@ class CounterDownViewModel: ObservableObject {
     @Published var isShare = false
     @Published var isPaused = false
     
+    @AppStorage("longBreak") var longBreak = "15"
+    @AppStorage("workTime") var workTime = "25"
+    @AppStorage("shortBreak") var shortBreak = "5"
+    
     private var initialTime = 0
     private var endDate = Date()
     private var isBreak = false
-    private var pomodoro = [25.0, 5.0, 15.0]
+    private var pomodoro: [Double] = []
     
     func start(minutes: Double) {
         withAnimation(.easeInOut) {
@@ -35,6 +39,7 @@ class CounterDownViewModel: ObservableObject {
             self.isActive = true
             self.endDate = Date()
             self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
+            pomodoro = [Double(workTime) ?? 25.0, Double(shortBreak) ?? 5.0, Double(longBreak) ?? 15.0]
         }
     }
     

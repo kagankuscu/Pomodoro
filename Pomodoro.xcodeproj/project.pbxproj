@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30261532A41B79E00B786C6 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30261522A41B79E00B786C6 /* SettingView.swift */; };
 		C36DF13D2A3C651200CC5525 /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DF13C2A3C651200CC5525 /* SharingViewController.swift */; };
 		C36DF1402A3E352800CC5525 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36DF1422A3E352800CC5525 /* Localizable.strings */; };
 		C36F5CAA2A30993E00EA654B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F5CA92A30993E00EA654B /* MyButton.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30261522A41B79E00B786C6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C36DF13C2A3C651200CC5525 /* SharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
 		C36DF1412A3E352800CC5525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C36DF1432A3E357300CC5525 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D6867C2A2F4A1D0077E026 /* ContentView.swift */,
+				C30261522A41B79E00B786C6 /* SettingView.swift */,
 			);
 			path = "Vıew";
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				C3D6867D2A2F4A1D0077E026 /* ContentView.swift in Sources */,
 				C3D6867B2A2F4A1D0077E026 /* PomodoroApp.swift in Sources */,
 				C36F5CAA2A30993E00EA654B /* MyButton.swift in Sources */,
+				C30261532A41B79E00B786C6 /* SettingView.swift in Sources */,
 				C3B0C89E2A3470420070E64E /* CouterDownViewModel.swift in Sources */,
 				C36DF13D2A3C651200CC5525 /* SharingViewController.swift in Sources */,
 			);
