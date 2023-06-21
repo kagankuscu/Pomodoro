@@ -17,7 +17,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 
-                HStack {
+                HStack(spacing: 12) {
                     Image(systemName: vm.countSet >= 1 ? "circle.fill" : "circle")
                         .resizable()
                         .frame(width: 30, height: 30)
