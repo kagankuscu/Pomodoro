@@ -90,7 +90,7 @@ struct ContentView: View {
         HStack {
             MyButton(title: vm.isActive && !vm.isPaused ? String(localized: "pause-string") : String(localized: "start-string")) {
                 if !vm.isActive {
-                    vm.start(minutes: 25.0)
+                    vm.start(minutes: Double(vm.workTime) ?? 25.0)
                 } else {
                     vm.isPaused.toggle()
                 }
