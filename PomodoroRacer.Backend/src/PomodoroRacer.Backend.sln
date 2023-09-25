@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Startup", "PomodoroRacer.Backend.Startup\PomodoroRacer.Backend.Startup.csproj", "{685FFCB4-CD30-4B91-9EC8-F83DBEEB5EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Domain", "PomodoroRacer.Backend.Domain\PomodoroRacer.Backend.Domain.csproj", "{2BEF9BA1-8119-4F51-8DAF-7C795E7490E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Infrastructure", "PomodoroRacer.Backend.Infrastructure\PomodoroRacer.Backend.Infrastructure.csproj", "{28116ADF-23B1-47F7-B12D-1C54FEB0A89F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Application", "PomodoroRacer.Backend.Application\PomodoroRacer.Backend.Application.csproj", "{525D163F-A506-4F4B-B748-1E6FDB87D737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Web", "PomodoroRacer.Backend.Web\PomodoroRacer.Backend.Web.csproj", "{E4B128E2-963E-48D2-9ADC-813C1F7F94E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{BEF68507-1F85-417D-93B4-EEB097D57D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Application", "PomodoroRacer.Backend.Common.Application\PomodoroRacer.Backend.Common.Application.csproj", "{A640BC64-80C2-4830-A64E-3328B492FE40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Domain", "PomodoroRacer.Backend.Common.Domain\PomodoroRacer.Backend.Common.Domain.csproj", "{D6B25918-7D89-44E7-BE94-31573676D77C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Insfratructure", "PomodoroRacer.Backend.Common.Insfratructure\PomodoroRacer.Backend.Common.Insfratructure.csproj", "{58997E0A-B859-4C14-9398-A1C8EF78F466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Startup", "PomodoroRacer.Backend.Common.Startup\PomodoroRacer.Backend.Common.Startup.csproj", "{E213A427-98B6-4B52-8758-1BACCABF05A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Web", "PomodoroRacer.Backend.Common.Web\PomodoroRacer.Backend.Common.Web.csproj", "{5B04D041-5B0F-42CB-AF50-C1751294C8B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{685FFCB4-CD30-4B91-9EC8-F83DBEEB5EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685FFCB4-CD30-4B91-9EC8-F83DBEEB5EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685FFCB4-CD30-4B91-9EC8-F83DBEEB5EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685FFCB4-CD30-4B91-9EC8-F83DBEEB5EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEF9BA1-8119-4F51-8DAF-7C795E7490E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEF9BA1-8119-4F51-8DAF-7C795E7490E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEF9BA1-8119-4F51-8DAF-7C795E7490E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEF9BA1-8119-4F51-8DAF-7C795E7490E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28116ADF-23B1-47F7-B12D-1C54FEB0A89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28116ADF-23B1-47F7-B12D-1C54FEB0A89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28116ADF-23B1-47F7-B12D-1C54FEB0A89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28116ADF-23B1-47F7-B12D-1C54FEB0A89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525D163F-A506-4F4B-B748-1E6FDB87D737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525D163F-A506-4F4B-B748-1E6FDB87D737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525D163F-A506-4F4B-B748-1E6FDB87D737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525D163F-A506-4F4B-B748-1E6FDB87D737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B128E2-963E-48D2-9ADC-813C1F7F94E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B128E2-963E-48D2-9ADC-813C1F7F94E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B128E2-963E-48D2-9ADC-813C1F7F94E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B128E2-963E-48D2-9ADC-813C1F7F94E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A640BC64-80C2-4830-A64E-3328B492FE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A640BC64-80C2-4830-A64E-3328B492FE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A640BC64-80C2-4830-A64E-3328B492FE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A640BC64-80C2-4830-A64E-3328B492FE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B25918-7D89-44E7-BE94-31573676D77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B25918-7D89-44E7-BE94-31573676D77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B25918-7D89-44E7-BE94-31573676D77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B25918-7D89-44E7-BE94-31573676D77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58997E0A-B859-4C14-9398-A1C8EF78F466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58997E0A-B859-4C14-9398-A1C8EF78F466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58997E0A-B859-4C14-9398-A1C8EF78F466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58997E0A-B859-4C14-9398-A1C8EF78F466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E213A427-98B6-4B52-8758-1BACCABF05A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E213A427-98B6-4B52-8758-1BACCABF05A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E213A427-98B6-4B52-8758-1BACCABF05A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E213A427-98B6-4B52-8758-1BACCABF05A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B04D041-5B0F-42CB-AF50-C1751294C8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B04D041-5B0F-42CB-AF50-C1751294C8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B04D041-5B0F-42CB-AF50-C1751294C8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B04D041-5B0F-42CB-AF50-C1751294C8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A640BC64-80C2-4830-A64E-3328B492FE40} = {BEF68507-1F85-417D-93B4-EEB097D57D4B}
+		{D6B25918-7D89-44E7-BE94-31573676D77C} = {BEF68507-1F85-417D-93B4-EEB097D57D4B}
+		{58997E0A-B859-4C14-9398-A1C8EF78F466} = {BEF68507-1F85-417D-93B4-EEB097D57D4B}
+		{E213A427-98B6-4B52-8758-1BACCABF05A8} = {BEF68507-1F85-417D-93B4-EEB097D57D4B}
+		{5B04D041-5B0F-42CB-AF50-C1751294C8B6} = {BEF68507-1F85-417D-93B4-EEB097D57D4B}
+	EndGlobalSection
+EndGlobal
