@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-preview.6.23329.11"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\PomodoroRacer.Backend.Application\PomodoroRacer.Backend.Application.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Application\PomodoroRacer.Backend.Common.Application.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Domain\PomodoroRacer.Backend.Common.Domain.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Insfratructure\PomodoroRacer.Backend.Common.Insfratructure.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Startup\PomodoroRacer.Backend.Common.Startup.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Web\PomodoroRacer.Backend.Common.Web.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Domain\PomodoroRacer.Backend.Domain.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Web\PomodoroRacer.Backend.Web.csproj" />
+    </ItemGroup>
+
+
+
+</Project>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30261532A41B79E00B786C6 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30261522A41B79E00B786C6 /* SettingView.swift */; };
+		C36DF13D2A3C651200CC5525 /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DF13C2A3C651200CC5525 /* SharingViewController.swift */; };
+		C36DF1402A3E352800CC5525 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36DF1422A3E352800CC5525 /* Localizable.strings */; };
+		C36F5CAA2A30993E00EA654B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F5CA92A30993E00EA654B /* MyButton.swift */; };
+		C3B0C89E2A3470420070E64E /* CouterDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0C89D2A3470420070E64E /* CouterDownViewModel.swift */; };
 		C3D6867B2A2F4A1D0077E026 /* PomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6867A2A2F4A1D0077E026 /* PomodoroApp.swift */; };
 		C3D6867D2A2F4A1D0077E026 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6867C2A2F4A1D0077E026 /* ContentView.swift */; };
 		C3D6867F2A2F4A1F0077E026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D6867E2A2F4A1F0077E026 /* Assets.xcassets */; };
@@ -14,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30261522A41B79E00B786C6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C338F12A2AAE2430009BB26E /* Pomodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pomodoro.entitlements; sourceTree = "<group>"; };
+		C36DF13C2A3C651200CC5525 /* SharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
+		C36DF1412A3E352800CC5525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C36DF1432A3E357300CC5525 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C36F5CA92A30993E00EA654B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		C3B0C89D2A3470420070E64E /* CouterDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouterDownViewModel.swift; sourceTree = "<group>"; };
 		C3D686772A2F4A1D0077E026 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D6867A2A2F4A1D0077E026 /* PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroApp.swift; sourceTree = "<group>"; };
 		C3D6867C2A2F4A1D0077E026 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +44,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C36F5CA62A2F52BF00EA654B /* Vıew */ = {
+			isa = PBXGroup;
+			children = (
+				C3D6867C2A2F4A1D0077E026 /* ContentView.swift */,
+				C30261522A41B79E00B786C6 /* SettingView.swift */,
+			);
+			path = "Vıew";
+			sourceTree = "<group>";
+		};
+		C36F5CA72A2F52C400EA654B /* Vıewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C3B0C89D2A3470420070E64E /* CouterDownViewModel.swift */,
+			);
+			path = "Vıewmodel";
+			sourceTree = "<group>";
+		};
+		C36F5CA82A2F52D200EA654B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C36F5CA92A30993E00EA654B /* MyButton.swift */,
+				C36DF13C2A3C651200CC5525 /* SharingViewController.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		C3D6866E2A2F4A1D0077E026 = {
 			isa = PBXGroup;
 			children = (
+				C36DF1422A3E352800CC5525 /* Localizable.strings */,
 				C3D686792A2F4A1D0077E026 /* Pomodoro */,
 				C3D686782A2F4A1D0077E026 /* Products */,
 			);
@@ -51,8 +90,11 @@
 		C3D686792A2F4A1D0077E026 /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				C338F12A2AAE2430009BB26E /* Pomodoro.entitlements */,
 				C3D6867A2A2F4A1D0077E026 /* PomodoroApp.swift */,
-				C3D6867C2A2F4A1D0077E026 /* ContentView.swift */,
+				C36F5CA82A2F52D200EA654B /* Other */,
+				C36F5CA72A2F52C400EA654B /* Vıewmodel */,
+				C36F5CA62A2F52BF00EA654B /* Vıew */,
 				C3D6867E2A2F4A1F0077E026 /* Assets.xcassets */,
 				C3D686802A2F4A1F0077E026 /* Preview Content */,
 			);
@@ -109,6 +151,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = C3D6866E2A2F4A1D0077E026;
 			productRefGroup = C3D686782A2F4A1D0077E026 /* Products */;
@@ -126,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D686822A2F4A1F0077E026 /* Preview Assets.xcassets in Resources */,
+				C36DF1402A3E352800CC5525 /* Localizable.strings in Resources */,
 				C3D6867F2A2F4A1F0077E026 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,16 +183,33 @@
 			files = (
 				C3D6867D2A2F4A1D0077E026 /* ContentView.swift in Sources */,
 				C3D6867B2A2F4A1D0077E026 /* PomodoroApp.swift in Sources */,
+				C36F5CAA2A30993E00EA654B /* MyButton.swift in Sources */,
+				C30261532A41B79E00B786C6 /* SettingView.swift in Sources */,
+				C3B0C89E2A3470420070E64E /* CouterDownViewModel.swift in Sources */,
+				C36DF13D2A3C651200CC5525 /* SharingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C36DF1422A3E352800CC5525 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36DF1412A3E352800CC5525 /* en */,
+				C36DF1432A3E357300CC5525 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C3D686832A2F4A1F0077E026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -209,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -264,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pomodoro/Pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro/Preview Content\"";
@@ -280,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kagankuscu.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kagankuscu.pomodorotogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pomodoro/Pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro/Preview Content\"";
@@ -309,7 +373,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kagankuscu.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kagankuscu.pomodorotogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: 'postgres:14.0'
+    container_name: pomodoro-racer-postgres
+    user: prdbuser
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: prdbuser
+      POSTGRES_PASSWORD: prdbuser
+      POSTGRES_DB: postgres
+    networks:
+      - pomodoro-racer-external
+
+  rabbitmq:
+    container_name: pomodoro-racer-rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=prguest
+      - RABBITMQ_DEFAULT_PASS=prguest
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq/mnesia
+    networks:
+      - pomodoro-racer-external
+
+volumes:
+  database-data:
+  rabbitmq:
+  elasticsearch-data:
+  apm-data:
+  pgadmin-data:
+
+networks:
+  pomodoro-racer-external:
+    external: true

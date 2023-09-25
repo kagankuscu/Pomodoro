@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PomodoroRacer.Backend.Application\PomodoroRacer.Backend.Application.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Application\PomodoroRacer.Backend.Common.Application.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Web\PomodoroRacer.Backend.Common.Web.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="Features\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    </ItemGroup>
+
+</Project>
