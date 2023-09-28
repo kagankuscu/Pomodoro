@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C30261532A41B79E00B786C6 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30261522A41B79E00B786C6 /* SettingView.swift */; };
+		C3658B0C2AC611B3004D6C58 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3658B0B2AC611B3004D6C58 /* Info.plist */; };
 		C36DF13D2A3C651200CC5525 /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DF13C2A3C651200CC5525 /* SharingViewController.swift */; };
 		C36DF1402A3E352800CC5525 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36DF1422A3E352800CC5525 /* Localizable.strings */; };
 		C36F5CAA2A30993E00EA654B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F5CA92A30993E00EA654B /* MyButton.swift */; };
@@ -21,9 +22,11 @@
 /* Begin PBXFileReference section */
 		C30261522A41B79E00B786C6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C338F12A2AAE2430009BB26E /* Pomodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pomodoro.entitlements; sourceTree = "<group>"; };
+		C3658B0B2AC611B3004D6C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36DF13C2A3C651200CC5525 /* SharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
 		C36DF1412A3E352800CC5525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C36DF1432A3E357300CC5525 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C36DFE712AC6186900041C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C36F5CA92A30993E00EA654B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		C3B0C89D2A3470420070E64E /* CouterDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouterDownViewModel.swift; sourceTree = "<group>"; };
 		C3D686772A2F4A1D0077E026 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +76,7 @@
 		C3D6866E2A2F4A1D0077E026 = {
 			isa = PBXGroup;
 			children = (
+				C3658B0B2AC611B3004D6C58 /* Info.plist */,
 				C36DF1422A3E352800CC5525 /* Localizable.strings */,
 				C3D686792A2F4A1D0077E026 /* Pomodoro */,
 				C3D686782A2F4A1D0077E026 /* Products */,
@@ -90,6 +94,7 @@
 		C3D686792A2F4A1D0077E026 /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				C36DFE712AC6186900041C1E /* Info.plist */,
 				C338F12A2AAE2430009BB26E /* Pomodoro.entitlements */,
 				C3D6867A2A2F4A1D0077E026 /* PomodoroApp.swift */,
 				C36F5CA82A2F52D200EA654B /* Other */,
@@ -168,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3658B0C2AC611B3004D6C58 /* Info.plist in Resources */,
 				C3D686822A2F4A1F0077E026 /* Preview Assets.xcassets in Resources */,
 				C36DF1402A3E352800CC5525 /* Localizable.strings in Resources */,
 				C3D6867F2A2F4A1F0077E026 /* Assets.xcassets in Resources */,
