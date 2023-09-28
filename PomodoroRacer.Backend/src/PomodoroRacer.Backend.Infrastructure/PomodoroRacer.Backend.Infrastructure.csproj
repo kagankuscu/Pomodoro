@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Insfratructure\PomodoroRacer.Backend.Common.Insfratructure.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Infrastructure\PomodoroRacer.Backend.Common.Infrastructure.csproj" />
       <ProjectReference Include="..\PomodoroRacer.Backend.Domain\PomodoroRacer.Backend.Domain.csproj" />
     </ItemGroup>
 

@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Domain", "PomodoroRacer.Backend.Common.Domain\PomodoroRacer.Backend.Common.Domain.csproj", "{D6B25918-7D89-44E7-BE94-31573676D77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Insfratructure", "PomodoroRacer.Backend.Common.Insfratructure\PomodoroRacer.Backend.Common.Insfratructure.csproj", "{58997E0A-B859-4C14-9398-A1C8EF78F466}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Infrastructure", "PomodoroRacer.Backend.Common.Infrastructure\PomodoroRacer.Backend.Common.Infrastructure.csproj", "{58997E0A-B859-4C14-9398-A1C8EF78F466}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRacer.Backend.Common.Startup", "PomodoroRacer.Backend.Common.Startup\PomodoroRacer.Backend.Common.Startup.csproj", "{E213A427-98B6-4B52-8758-1BACCABF05A8}"
 EndProject
