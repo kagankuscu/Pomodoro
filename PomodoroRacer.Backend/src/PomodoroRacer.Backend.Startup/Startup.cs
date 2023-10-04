@@ -1,6 +1,9 @@
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using PomodoroRacer.Backend.Application;
 using PomodoroRacer.Backend.Domain;
+using PomodoroRacer.Backend.Infrastructure;
+using PomodoroRacer.Backend.Web;
 
 namespace PomodoroRacer.Backend.Startup;
 
@@ -23,12 +26,12 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services
-            .AddDomain(this.CurrentEnvironment.IsDevelopment())
+            .AddDomain()
             .AddApplication(this.Configuration)
-            .AddInfrastructure(this.Configuration, this.CurrentEnvironment)
-            .AddWebComponents()
-            .AddDatabaseDeveloperPageExceptionFilter()
-            .AddSignalR()
+            .AddInfrastructure()
+            .AddWeb()
+            //.AddDatabaseDeveloperPageExceptionFilter()
+            //.AddSignalR()
             .AddControllers();
 
         services.AddSwaggerGen(c =>
@@ -84,14 +87,14 @@ public class Startup
         app.UseRouting()
             .UseAuthentication()
             .UseAuthorization()
-            .UseValidationExceptionHandler()
+            //   .UseValidationExceptionHandler()
             .UseHealthChecks("/health")
-            .UseEndpoints(endpoints => endpoints.MapControllers())
-            .UseEndpoints(endpoints =>
-            {
-                endpoints.MapHub<EngagementProgressHub>("/engagementprogresshub");
-            });
+            .UseEndpoints(endpoints => endpoints.MapControllers());
+            // .UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapHub<EngagementProgressHub>("/engagementprogresshub");
+            // });
 
-        app.Initialize();
+       // app.Initialize();
     }
 }

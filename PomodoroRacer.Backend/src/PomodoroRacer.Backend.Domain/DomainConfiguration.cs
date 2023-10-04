@@ -6,6 +6,11 @@ namespace PomodoroRacer.Backend.Domain;
 
 public static class DomainConfiguration
 {
-    public static IServiceCollection AddDomain(this IServiceCollection services, bool isTestEnvironment = false)
-        => services.AddDomainBase(Assembly.GetExecutingAssembly(), isTestEnvironment);
+    public static IServiceCollection AddDomain(
+        this IServiceCollection services)
+    {
+        services.AddCommonDomain(Assembly.GetExecutingAssembly());
+
+        return services;
+    }
 }

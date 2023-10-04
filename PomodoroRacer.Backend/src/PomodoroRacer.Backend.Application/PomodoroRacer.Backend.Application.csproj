@@ -7,8 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Application\PomodoroRacer.Backend.Common.Application.csproj" />
       <ProjectReference Include="..\PomodoroRacer.Backend.Common.Domain\PomodoroRacer.Backend.Common.Domain.csproj" />
-      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Insfratructure\PomodoroRacer.Backend.Common.Insfratructure.csproj" />
+      <ProjectReference Include="..\PomodoroRacer.Backend.Common.Infrastructure\PomodoroRacer.Backend.Common.Infrastructure.csproj" />
       <ProjectReference Include="..\PomodoroRacer.Backend.Domain\PomodoroRacer.Backend.Domain.csproj" />
       <ProjectReference Include="..\PomodoroRacer.Backend.Infrastructure\PomodoroRacer.Backend.Infrastructure.csproj" />
     </ItemGroup>

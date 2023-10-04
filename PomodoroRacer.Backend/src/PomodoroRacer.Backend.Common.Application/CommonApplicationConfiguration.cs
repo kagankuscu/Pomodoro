@@ -1,15 +1,13 @@
 using PomodoroRacer.Backend.Common.Application.Services;
-using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
 using System.Reflection;
 
 namespace PomodoroRacer.Backend.Common.Application;
 
-public static class ApplicationBaseConfiguration
+public static class CommonApplicationConfiguration
 {
-    public static IServiceCollection AddApplicationBase(
+    public static IServiceCollection AddCommonApplication(
         this IServiceCollection services,
         IConfiguration configuration,
         Assembly assembly)

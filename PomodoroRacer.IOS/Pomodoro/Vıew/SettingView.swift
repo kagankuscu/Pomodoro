@@ -47,7 +47,7 @@ struct SettingView: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal, 8)
             .navigationTitle(String(localized: "setting-string"))
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(Color.red, for: .navigationBar)

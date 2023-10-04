@@ -4,9 +4,11 @@ using PomodoroRacer.Backend.Common.Domain.Contracts;
 
 namespace PomodoroRacer.Backend.Common.Domain;
 
-public static class DomainBaseConfiguration
+public static class CommonDomainConfiguration
 {
-    public static IServiceCollection AddDomainBase(this IServiceCollection services, Assembly assembly)
+    public static IServiceCollection AddCommonDomain(
+        this IServiceCollection services,
+        Assembly assembly)
     {
         services
             .Scan(scan => scan
